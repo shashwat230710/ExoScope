@@ -1,0 +1,6 @@
+{
+  "name": "ExoScope: AI Exoplanet Classifier & Habitability Explorer",
+  "description": "Explore NASA exoplanet discoveries with AI. Classify transit candidates, evaluate planetary habitability potentials with physics-based ESI models, and inspect explainable ML metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
