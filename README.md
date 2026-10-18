@@ -1,37 +1,20 @@
-ExoScope 🔭
-An advanced platform for astronomical data visualization and exoplanet transit analysis.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-🌟 Overview
-ExoScope is a high-performance web-based analytical tool designed to process, visualize, and analyze astronomical telescope data—focusing on exoplanet light curves, transit photometry, and planetary candidate classification. Built with a robust full-stack architecture, it bridges raw telemetry data and interactive web visualization to assist researchers and astronomy enthusiasts in exploring distant planetary systems.
+# Run and deploy your AI Studio app
 
-✨ Key Features
-Interactive Light Curve Visualizer: Dynamic charting interface to inspect stellar flux variations and transit dips.
+This contains everything you need to run your app locally.
 
-Automated Transit Detection: Machine learning / algorithmic pipelines for flagging potential exoplanet transit events.
+View your app in AI Studio: https://ai.studio/apps/74dafbb5-dc9f-4387-9618-87fef72a43aa
 
-Data Ingestion & Processing: High-throughput backend processors handling FITS files and astronomical catalogs (Kepler, TESS, etc.).
+## Run Locally
 
-Modern Responsive Dashboard: Clean, intuitive UI built for seamless navigation across telemetry metrics and candidate parameters.
+**Prerequisites:**  Node.js
 
-🛠️ Tech Stack
-Frontend
-Framework: React, Vite
 
-Styling: Tailwind CSS
-
-Visualization: Chart.js / D3.js
-
-Backend
-API Framework: FastAPI / Python
-
-Data Processing: NumPy, Pandas, SciPy, Astropy
-
-🚀 Getting Started
-Prerequisites
-Ensure you have the following installed on your system:
-
-Node.js (v18+ recommended)
-
-Python (v3.10+)
-
-Git
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
