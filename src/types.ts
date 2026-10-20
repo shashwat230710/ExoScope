@@ -27,6 +27,31 @@ export interface FeatureImpact {
   description: string;
 }
 
+export interface VettingTestResult {
+  id: string;
+  name: string;
+  category: 'photometric' | 'astrometric' | 'geometric' | 'morphology' | 'statistical';
+  status: 'PASSED' | 'WARNING' | 'FAILED';
+  score: number; // 0 to 100
+  metricValue: string;
+  threshold: string;
+  summary: string;
+  physicalExplanation: string;
+  iconType: string;
+}
+
+export interface VerificationSuite {
+  overall_vetting_score: number; // 0 to 100
+  vetting_disposition: 'ROBUST PLANET CANDIDATE' | 'SUSPECT / UNRESOLVED' | 'CONFIRMED FALSE ALARM';
+  tests: VettingTestResult[];
+  consensus: {
+    xgboost_prob: number;
+    random_forest_prob: number;
+    bayesian_physics_prob: number;
+    agreement: string;
+  };
+}
+
 export interface ClassifierResult {
   label: 'CONFIRMED' | 'FALSE POSITIVE';
   probability: number;          // Calibrated probability [0, 1]
@@ -35,6 +60,7 @@ export interface ClassifierResult {
   model_version: string;
   confidence_level: 'High' | 'Moderate' | 'Low';
   astrophysical_summary: string;
+  verification_suite: VerificationSuite;
 }
 
 export interface PlanetRecord {
